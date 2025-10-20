@@ -25,12 +25,11 @@
     --font-family: "Red Hat Text", sans-serif;
 }
 
-
-
 img {
     display: block;
     max-width: 100%;
 }
+
 
 body {
     font-family: var(--font-family);
@@ -39,6 +38,17 @@ body {
     min-height: 100vh;
     background-color: var(--rose-50);
 }
+
+/* utility classes  */
+.hidden{
+    display: none;
+}
+
+
+
+
+
+/* main styling stat  */
 
 .main-container {
     max-width: 65rem;
@@ -93,7 +103,8 @@ body {
     margin-block: .5rem;
 }
 
-button.add-to-cart-active {
+
+button.btn-active {
     justify-content: space-between;
     padding-inline: 1rem;
     font-weight: var(--fw-700);
@@ -102,12 +113,18 @@ button.add-to-cart-active {
     cursor:auto;
 }
 
-button.add-to-cart-active .btn-circle {
+button.btn-active .btn-circle {
     width: 20px;
     aspect-ratio: 1;
     border-radius: 50%;
     outline: 2px solid white;
     cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+button.btn-active .btn-circle:hover{
+    background-color: white;
+    color: var(--primary-red-clr);
 }
 
 .cart-category {
@@ -156,10 +173,6 @@ button.add-to-cart-active .btn-circle {
     justify-content: center;
 }
 
-.hidden{
-    display: none;
-}
-
 .empty-cart-message {
     color: var(--rose-500);
     font-weight: var(--fw-400);
@@ -172,52 +185,6 @@ button.add-to-cart-active .btn-circle {
     justify-content: center;
 }
 
-.order-cart-card{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--rose-300);
-    padding-block: .5rem;
-}
-
-.cancel-btn{
-   width: 20px;
-   height: 20px;
-   border-radius: 50%;
-   outline: 2px solid var(--rose-300);
-
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   font-size: 1.2rem;
-   cursor: pointer;
-   color: var(--rose-300);
-}
-
-.cancel-btn span{
-    rotate: 45deg;
-}
-
-.order-cart-details-side .red{
-  color: var(--primary-red-clr);
-  font-weight: var(--fw-700);
-}
-
-.grey{
-    color: var(--rose-400);
-}
-
-.dark-grey{
-    color: var(--rose-500);
-}
-
-.order-cart-details-side{
-    font-size: .9rem;
-}
-
-.order-cart-name{
-    font-weight: var(--fw-700);
-}
 
 
 /* responsive design  */
